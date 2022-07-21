@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Boss Monster</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+  <body class=" debug text-light">
+    <main class="container-fluid hero-img">
+        <div id="heros" class="row">
+            <!-- SECTION HERO CARD -->
+            <!-- Inject hero HTML -->
+            <!-- <div class="col-4 m-5 heros-card" onclick="">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Hero</p>
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAADSCAMAAADUvhpHAAAADFBMVEX////kXBD/oES4+Bh+0A+WAAABI0lEQVR4nO3VQQ6DIBBAUav3v3N3nc1kCsEgmPeXIszTDcchSZIkSdINXQNBQ0NDQ0Pvjh6hPsaHhoaGhoYe6vyVoT8DZehsGjQ0NDQ09KroEWoWNDQ0NDT0TugoxsWzuJSzHdlqdgo0NDQ0NPTu6JrQvwMaGhoaGnotdM2/u/gQaGhoaGjoVdFXUj24vqiz86ChoaGhoddCZ4PrMlY/NQsaGhoaGno2usa08jNWXT0DGhoaGhr6OfRZ1v9xNbWeAQ0NDQ0N/Ry6FZO9F6x6R+svgoaGhoaG3hOdrWbXeH21/6FCQ0NDQ0NPRrcW41qBUTMQGhoaGhp6Cjo6uwt+/++AhoaGhoZeFV23AKE/6FlBzwp6VtCz2hItSZIkSZIkSS/uC56NfQGSrozMAAAAAElFTkSuQmCC" 
+                        alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>                      
+                </div>
+                <div class="row">
+                    <p>Health</p>
+                </div>
+            </div> -->
+            <!-- -------------- -->
+        </div>
+        <!-- SECTION Boss card -->
+        <div id="boss" class="row d-flex justify-content-center">
+            <!-- <div class="col-10 boss-card">
+                <div class="row">
+                    <div class="col-12 p-2">
+                        <div class="progress p-0">
+                            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center p-3">
+                        <h1>Boss Name</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center p-3 mt-2">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAADnCAMAAABPJ7iaAAAA4VBMVEVQhvgAAAD////zGElTi//7BTZqfej2EkJSiv9Div/KRo0VI0E6evdCfvhEctTT3v35CjqObM34Dz4mQHdAasV6enq1yPxNhPiJiYna2tpkkvn19fVfX1/N2f2UaciuWq4qR4Pi6f40V6Hv8/6DpvpKfOUPGS8fM1+UsfqsXLE8ZbpDQ0Ntl/koKCj4+v98ddzES5X/ACrTPoEvdfcwUJRWkf9MV3Q4Xa0LEiIcHBwgNWIPQ5mkvPsIDhm+z/wlcfdTUU6yquWfo7HByuR0c2+Qkpu9u+2XYcHaOHeJb9FigO5jUWsUAAADx0lEQVR4nO3dXVfTMACH8QGDdbDJeJEhyosgIIiDAXOKiqIIwvf/QOrF6D+ek3PaNFlaeJ7bru1+pBdZ6bLaRKie1SzVg53SrBbsyNDCBc0haOGC5hC0cEFzCFq4oDkELVzQHIIWLmgOQQsXNIeghQuaQ9DCBc0haOGC5hC0cEFzCFq4oDkELVzQHIIWLmgOQQsXNIeghQuaQ9DC5ZV2vizt2miJvurQ5/nNvNIOE8km+2vTV/k8v5lnmt1jadfn+c2gZQsatKJByxY0aEWDlq3HRTvflXLD/tmkZS+kUUVp2/kHylryzAtpVJloNWgZg2YNGjQvpFHQrEGD5oU0qvAcsuq0/UHdkk9ZrWY7y2AYjlb3Kshdsg0NGjRo0KBBe+K0pJtWfdo76cORtBaBNtybS/tYkPZ+0tZ8O4JN58pbwWjrEWgGExo0aNCgQYP2JGifrLQYE63CtOfSqmp689JKjLm/0oZL0l42mnWgXp+10yLLzAd8BxdFaZGvQXv1fWjQShQ0aKUKGrRS9URp22mfVdNbkb5EnzfaSg4FMDTuK+tcs2XQSjUjtqdz5brxMUBfZdJasd6se9CglSpo0EoVNGilKiNtsoq0rzZa961W4nmjNV04YtnY0u3GffKleNnWlyAiIiKqXO2WlHGmpruU9h51rX25k9Z7k8m21pN9Yj+RYq+9rh+KMtJ0l/L+awGaEbTYQTOCFjtoRtBi98hoOiM+M2lntrmyzohrusvOtxLNldsr+tZW9b70C92iX+cz77/rLt91Q+y5cmaaDJtBe6m7vNItsZ+5Lzxqj4DGqFWRxqhVkcaoVZHGqFWRxqhVkcaoVZHGqEEbR1yQjBq08cQF+ahp1bggZzYW0q504YcfsjzE9U/doqPW1g3z17LPL91wI2dZmBmLrLnR7zzU35Rvuf13Y7wlm4wjtHWD7mKsInFrnKY5Hlpn6qFFPafXf2fYTxMuaNCgQSsYNGjQ4tDSPNDkaLFpjdODzbQrXRLiKMvBuoNL2eVGjnUw24hLm2ospvVvdeKb7bHqru5y3JejiSwOTetsFHwDx9OWI0MrGjSXoAULmkvQggXNJc+03F+tN+5DdhomrVgGrdHJfx8yMTSyzu5FNpvePb47EVvj92yxTvVgp3e57x4nW7pssLFmXf6fbGkeLOofumh6rJP812DdXNjNJ81nTrQ9aNCgQYMGDVq1afl/qbe52Z8OU3/WSktsb3Ngp83ZWrLa7mdCdW+VnVvf54SVZi32bx0aFf4xF2gRggYN2niCBg3aeII28Qct+CjKY9sqcwAAAABJRU5ErkJggg==" alt="">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-6">Buy options</div>
+            <div class="col-6">button</div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

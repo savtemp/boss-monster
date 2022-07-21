@@ -1,0 +1,25 @@
+.hero-img{
+    background-image: url("https://images.unsplash.com/photo-1633952049130-d25c58e40ea4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvcmVzdCUyMGFyaWVsJTIwdmlld3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.heros-card{
+    background-color: grey;
+    border: 2px solid white;
+    height: 10em;
+    width: 10em;
+}
+
+.heros-image{
+    max-height: 5em;
+    
+}
+
+.boss-card{
+    background-image: url("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZvcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    border: 2px solid white;
+    height: 25em;
+    width: 40em;
+}
