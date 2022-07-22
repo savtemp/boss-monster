@@ -1,25 +1,54 @@
 .hero-img{
-    background-image: url("https://images.unsplash.com/photo-1633952049130-d25c58e40ea4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvcmVzdCUyMGFyaWVsJTIwdmlld3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.unsplash.com/photo-1599148401012-60bd30ff1967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9yZXN0JTIwZnJvbSUyMGFib3ZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .heros-card{
-    background-color: grey;
-    border: 2px solid white;
-    height: 10em;
-    width: 10em;
+    background-color: rgb(29, 29, 29);
+    border: 3px solid white;
+    border-radius: 0.5em;
+    height: 17em;
+    width: 17em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
 }
 
 .heros-image{
     max-height: 5em;
-    
+}
+
+
+.boss-image{
+    max-height: 20em;
 }
 
 .boss-card{
     background-image: url("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZvcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
-    border: 2px solid white;
-    height: 25em;
+    border: 3px solid white;
+    border-radius: 0.5em;
+    height: 30em;
     width: 40em;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 10px 10px 10px black;
+}
+
+.purchase-card{
+    background-color: rgb(29, 29, 29);
+    border: 3px solid white;
+    border-radius: 0.5em;
+    width: 25em;
+    margin-left: 0em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.button-style{
+    background-color: rgb(29, 29, 29);
+    border: 3px solid white;
+    border-radius: 0.5em;
+    color: red;
+    width: 8em;
+    height: 4em;
+    font-family: 'Press Start 2P', cursive;
 }
