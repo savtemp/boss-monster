@@ -1,11 +1,15 @@
 const heros = {
     MARK: {
         health: 100,
-        image: "https://dodo.ac/np/images/f/fe/Rosie_NH_Transparent.png"
+        image: "https://dodo.ac/np/images/f/fe/Rosie_NH_Transparent.png",
+        gold: 0,
+        level: 1,
     },
     MICK: {
         health: 100,
         image: "https://play.nintendo.com/images/AC_Isabelle_7XU6aGu.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
+        gold: 0,
+        level: 1,
     }
 }
 
@@ -13,7 +17,8 @@ const bosses = [
     {
         name: 'JavaScript',
         health: 100,
-        image: "https://play.nintendo.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png"
+        image: "https://play.nintendo.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
+        level: 1,
     }
 ]
 
@@ -42,10 +47,10 @@ function drawHero() {
             <p class="m-0"><span>HP:</span> ${hero.health}</p>
         </div>
         <div class="row">
-            <p class="m-0"><span>GOLD:</span>0</p>
+            <p class="m-0"><span>GOLD:</span>${hero.gold}</p>
         </div>
         <div class="row">
-            <p class="m-0 p-2 mt-2"><span>LVL:</span>1</p>
+            <p class="m-0 p-2 mt-2"><span>LVL:</span>${hero.level}</p>
         </div>
     </div>
         `
@@ -66,6 +71,9 @@ function drawBoss() {
                             <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${boss.health}%"></div>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <p class="m-0"><span>HP:</span>${boss.health}</p>
                 </div>
                 <div class="row">
                     <div class="col-12 text-center p-3">
@@ -89,12 +97,33 @@ drawBoss()
 function attackBoss(health) {
     let boss = bosses.find(boss => boss.health == health)
     // console.log(boss);
+    for(let key in heros){
+        let hero = heros[key]
+        if(hero.health <= 0){
+            return 
+        }
+    }
     boss.health -= 5
+//    FIXME get boss health to double instead of going negative
     if(boss.health < 0){
         boss.health = 0
+        // boss.health * 2
+        // bossLevelUp()
     }
     drawBoss()
 }
+
+// // FIXME 
+// function bossLevelUp(){
+//     boss.level++
+//     boss.health = boss.level * 10
+//     for(let key in heros){
+//         let hero = heros[key]
+//         hero.gold += boss.level * 10
+//     }
+//     // document.getElementById('gold').innerText
+//     // Getting gold here, how to get onto page ?
+// }
 
 function attackHero(){
     for(let key in heros){
@@ -109,7 +138,33 @@ function attackHero(){
 
 setInterval(attackHero, 3000)
 
+// FIXME redo reset function 
 function reset(){
-    drawBoss()
-    drawHero()
+    bossTemplate = ''
+    heroTemplate = ''
 }
+
+
+// SECTION add helpers to attack the boss and heal the hero
+const helpers = {
+    Potion: {
+        type: 'heal',
+        cost: 20,
+    },
+    Sam: {
+        type: 'dmg',
+        cost: 50,
+    },
+    Jake: {
+        type: 'dmg',
+        cost: 1000
+    }
+}
+
+function damageBoss(){}
+
+function healHero(){}
+
+function heroActions(){}
+
+function buyPotion(){}
