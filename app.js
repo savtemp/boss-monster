@@ -81,7 +81,10 @@ function drawBoss() {
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 text-center p-3 mt-2">
+                    <p class="m-0 text-center"><span>LVL:</span>${boss.level}</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center p-1">
                         <img class="img-fluid boss-image" onClick="attackBoss('${boss.health}')" 
                         src=${boss.image} 
                         alt="">
