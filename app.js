@@ -1,32 +1,34 @@
 const heros = {
-    MARK: {
-        health: 100,
-        image: "https://dodo.ac/np/images/f/fe/Rosie_NH_Transparent.png",
-        gold: 0,
-        level: 1,
-    },
-    MICK: {
-        health: 100,
-        image: "https://play.nintendo.com/images/AC_Isabelle_7XU6aGu.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
-        gold: 0,
-        level: 1,
-    }
-}
+  MARK: {
+    health: 100,
+    image: "https://dodo.ac/np/images/f/fe/Rosie_NH_Transparent.png",
+    gold: 0,
+    level: 1,
+  },
+  MICK: {
+    health: 100,
+    image:
+      "https://play.nintendo.com/images/AC_Isabelle_7XU6aGu.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
+    gold: 0,
+    level: 1,
+  },
+};
 
 const bosses = [
-    {
-        name: 'JavaScript',
-        health: 100,
-        image: "https://play.nintendo.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
-        level: 1,
-    }
-]
+  {
+    name: "JavaScript",
+    health: 100,
+    image:
+      "https://play.nintendo.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
+    level: 1,
+  },
+];
 
 function drawHero() {
-    let heroTemplate = ''
-    for (let key in heros) {
-        let hero = heros[key]
-        heroTemplate += `
+  let heroTemplate = "";
+  for (let key in heros) {
+    let hero = heros[key];
+    heroTemplate += `
         <div class="col-4 m-5 heros-card" onclick="">
         <div class="row">
             <div class="col-6 p-2">
@@ -53,17 +55,20 @@ function drawHero() {
             <p class="m-0 p-2 mt-2"><span>LVL:</span>${hero.level}</p>
         </div>
     </div>
-        `
-        // console.log(heroTemplate);
-        let herosElm = document.getElementById('heros')
-        herosElm.innerHTML = heroTemplate
-    }
+        `;
+    // console.log(heroTemplate);
+    let herosElm = document.getElementById("heros");
+    // @ts-ignore
+    herosElm.innerHTML = heroTemplate;
+  }
 }
-drawHero()
+drawHero();
 
 function drawBoss() {
-    let bossTemplate = ''
-    bosses.forEach(boss => bossTemplate += `
+  let bossTemplate = "";
+  bosses.forEach(
+    (boss) =>
+      (bossTemplate += `
         <div class="col-10 boss-card">
                 <div class="row">
                     <div class="col-12 p-2">
@@ -92,31 +97,36 @@ function drawBoss() {
                 </div>
             </div>
         `)
-    bossElm = document.getElementById('boss')
-    bossElm.innerHTML = bossTemplate
+  );
+  let bossElm = document.getElementById("boss");
+  // @ts-ignore
+  bossElm.innerHTML = bossTemplate;
 }
-drawBoss()
+drawBoss();
 
 function attackBoss(health) {
-    let boss = bosses.find(boss => boss.health == health)
-    // console.log(boss);
-    for(let key in heros){
-        let hero = heros[key]
-        if(hero.health <= 0){
-            return 
-        }
+  let boss = bosses.find((boss) => boss.health == health);
+  // console.log(boss);
+  for (let key in heros) {
+    let hero = heros[key];
+    if (hero.health <= 0) {
+      return;
     }
-    boss.health -= 5
-//    FIXME get boss health to double instead of going negative
-    if(boss.health < 0){
-        boss.health = 0
-        // boss.health * 2
-        // bossLevelUp()
-    }
-    drawBoss()
+  }
+  // @ts-ignore
+  boss.health -= 5;
+  //    FIXME get boss health to double instead of going negative
+  // @ts-ignore
+  if (boss.health < 0) {
+    // @ts-ignore
+    boss.health = 0;
+    // boss.health * 2
+    // bossLevelUp()
+  }
+  drawBoss();
 }
 
-// // FIXME 
+// // FIXME
 // function bossLevelUp(){
 //     boss.level++
 //     boss.health = boss.level * 10
@@ -128,46 +138,45 @@ function attackBoss(health) {
 //     // Getting gold here, how to get onto page ?
 // }
 
-function attackHero(){
-    for(let key in heros){
-        let hero = heros[key]
-        hero.health -= 5
-        if(hero.health < 0){
-            hero.health = 0
-        }
+function attackHero() {
+  for (let key in heros) {
+    let hero = heros[key];
+    hero.health -= 5;
+    if (hero.health < 0) {
+      hero.health = 0;
     }
-    drawHero()
+  }
+  drawHero();
 }
 
-setInterval(attackHero, 3000)
+setInterval(attackHero, 3000);
 
-// FIXME redo reset function 
-function reset(){
-    bossTemplate = ''
-    heroTemplate = ''
+// FIXME redo reset function
+function reset() {
+  let bossTemplate = "";
+  let heroTemplate = "";
 }
-
 
 // SECTION add helpers to attack the boss and heal the hero
 const helpers = {
-    Potion: {
-        type: 'heal',
-        cost: 20,
-    },
-    Sam: {
-        type: 'dmg',
-        cost: 50,
-    },
-    Jake: {
-        type: 'dmg',
-        cost: 1000
-    }
-}
+  Potion: {
+    type: "heal",
+    cost: 20,
+  },
+  Sam: {
+    type: "dmg",
+    cost: 50,
+  },
+  Jake: {
+    type: "dmg",
+    cost: 1000,
+  },
+};
 
-function damageBoss(){}
+function damageBoss() {}
 
-function healHero(){}
+function healHero() {}
 
-function heroActions(){}
+function heroActions() {}
 
-function buyPotion(){}
+function buyPotion() {}

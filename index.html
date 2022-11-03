@@ -1,44 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
     <title>Boss Monster</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-<style>
-  body.debug .container,
-  body.debug .container-fluid {
-    outline: 2px double blue;
-    outline-offset: -2px;
-  }
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
 
-  body.debug .row {
-    outline: 2px dashed red;
-    outline-offset: -2px;
-  }
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
 
-  body.debug [class*="col-"] {
-    outline: 2px dotted forestgreen;
-    outline-offset: -3px;
-  }
-</style>
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
 
-  <body class=" text-light">
+  <body class="text-light">
     <main class="container-fluid hero-img">
-        <div id="heros" class="row">
-            <!-- SECTION HERO CARD -->
-            <!-- Inject hero HTML -->
-            <!-- <div class="col-4 m-5 heros-card" onclick="">
+      <div id="heros" class="row">
+        <!-- SECTION HERO CARD -->
+        <!-- Inject hero HTML -->
+        <!-- <div class="col-4 m-5 heros-card" onclick="">
                 <div class="row">
                     <div class="col-6">
                         <p>Hero</p>
@@ -58,11 +68,11 @@
                     <p>Health</p>
                 </div>
             </div> -->
-            <!-- -------------- -->
-        </div>
-        <!-- SECTION Boss card -->
-        <div id="boss" class="row d-flex justify-content-center">
-            <!-- <div class="col-10 boss-card">
+        <!-- -------------- -->
+      </div>
+      <!-- SECTION Boss card -->
+      <div id="boss" class="row d-flex justify-content-center">
+        <!-- <div class="col-10 boss-card">
                 <div class="row">
                     <div class="col-12 p-2">
                         <div class="progress p-0">
@@ -84,45 +94,44 @@
                     </div>
                 </div>
             </div> -->
-        </div>
-        <div class="row d-flex justify-content-between">
-            <div class="col-5 m-4 px-5">
-                <div class="row purchase-card p-2">
-                    <div class="col-12 d-flex justify-content-between">
-                        <p class="m-0 p-2">BUY POTION</p>
-                        <p class="m-0 p-2">20G</p>
-                    </div>
-                    <div class="col-12 d-flex justify-content-between">
-                        <p class="m-0 p-2">BUY SAM</p>
-                        <p class="m-0 p-2">50G</p>
-                    </div>
-                    <div class="col-12 d-flex justify-content-between">
-                        <p class="m-0 p-2">BUY JAKE</p>
-                        <p class="m-0 p-2">1000G</p>
-                    </div>
-                </div>
+      </div>
+      <div class="row d-flex justify-content-between">
+        <div class="col-5 m-4 px-5">
+          <div class="row purchase-card p-2">
+            <div class="col-12 d-flex justify-content-between">
+              <p class="m-0 p-2">BUY POTION</p>
+              <p class="m-0 p-2">20G</p>
             </div>
-            <div class="col-5 d-flex m-4 px-4 text-end align-items-end justify-content-end">
-                <button class="btn button-style p-3" onclick="reset()">RESET</button>
+            <div class="col-12 d-flex justify-content-between">
+              <p class="m-0 p-2">BUY SAM</p>
+              <p class="m-0 p-2">50G</p>
             </div>
+            <div class="col-12 d-flex justify-content-between">
+              <p class="m-0 p-2">BUY JAKE</p>
+              <p class="m-0 p-2">1000G</p>
+            </div>
+          </div>
         </div>
+        <div
+          class="col-5 d-flex m-4 px-4 text-end align-items-end justify-content-end"
+        >
+          <button class="btn button-style p-3" onclick="reset()">RESET</button>
+        </div>
+      </div>
     </main>
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="app.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
