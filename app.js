@@ -4,6 +4,8 @@ const heros = {
     image: "https://dodo.ac/np/images/f/fe/Rosie_NH_Transparent.png",
     gold: 0,
     level: 1,
+    damage: 5,
+    type: "human",
   },
   MICK: {
     health: 100,
@@ -11,6 +13,8 @@ const heros = {
       "https://play.nintendo.com/images/AC_Isabelle_7XU6aGu.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
     gold: 0,
     level: 1,
+    damage: 10,
+    type: "human",
   },
 };
 
@@ -18,9 +22,11 @@ const bosses = [
   {
     name: "JavaScript",
     health: 100,
+    maxHealth: 100,
     image:
       "https://play.nintendo.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
     level: 1,
+    damage: 5,
   },
 ];
 
